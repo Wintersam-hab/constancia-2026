@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descargar Constancia SG-SST 2026</title>
+  <meta name="robots" content="noindex,nofollow">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+    .card {
+      width: 100%;
+      max-width: 460px;
+      background: white;
+      border-radius: 18px;
+      padding: 34px 28px;
+      text-align: center;
+      box-shadow: 0 10px 35px rgba(0,0,0,.10);
+    }
+    .icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #eef7ee;
+      font-size: 34px;
+    }
+    h1 { margin: 0 0 10px; font-size: 24px; }
+    p { line-height: 1.5; color: #667085; margin: 8px 0; }
+    .button {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 14px 24px;
+      border-radius: 10px;
+      background: #1677ff;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .small { font-size: 13px; margin-top: 18px; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="icon">📄</div>
+    <h1>Constancia SG-SST 2026</h1>
+    <p>Fundación Social Para el Desarrollo Cultural Tecnológico y Ecológico de Colombia</p>
+    <p id="status">Preparando la descarga...</p>
+
+    <a id="download" class="button" href="#" target="_self">
+      Descargar constancia
+    </a>
+
+    <p class="small">
+      Si la descarga no comienza automáticamente, pulsa el botón.
+    </p>
+  </main>
+
+  <script>
+    const downloadUrl =
+      "https://drive.google.com/uc?export=download&id=16N-90aA7eS_QIGWggKSp_nHK19sQhonA";
+
+    const button = document.getElementById("download");
+    const status = document.getElementById("status");
+
+    button.href = downloadUrl;
+
+    // Intentar iniciar la descarga automáticamente.
+    setTimeout(() => {
+      status.textContent = "Iniciando descarga...";
+      window.location.href = downloadUrl;
+    }, 700);
+  </script>
+</body>
+</html>
